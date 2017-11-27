@@ -1,0 +1,29 @@
+下载git客户端：https://git-for-windows.github.io
+打开 Git Bash
+
+#创建仓库之前，设置。在命令行输入：
+git config --global user.name "Your Name"
+git config --global user.email "Your email"
+
+git add readme.txt				把文件添加到仓库（假设上传文件 readme.txt）
+git commit -m "这是注释"		把文件提交到仓库（假设上传文件 readme.txt）
+
+git status	查看修改后的状态
+git reset --hard HEAD^回退到之前的版本
+git relog找到回退的那个版本的commit id版本号
+git log
+git reset 6fd65810	想回退到某个版本（commit id 缩写即可回退，图示： http://img.blog.csdn.net/20171123155034561）
+
+git rm readme.txt	删除文件（先在工作区实际删掉这个文件，再输入此命令）
+git checkout --readme.txt	误删除的恢复（从版本库中恢复回来。实际是用版本库中的readme.txt版本替换工作区中的版本）
+
+git checkout --file与git reset区别：
+git checkout -- file是从版本仓库中暂存区stage恢复到工作区
+git restet是回退恢复版本
+
+
+
+
+
+
+
